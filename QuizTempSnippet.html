@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Quiz Template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500|Roboto+Slab|Material+Icons" type="text/css" />
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
+		<link rel="stylesheet" href="https://geteach.com/scripts/newearth/geteachStyle1227.css" type="text/css" />
+		<script>
+			function answerClick(){
+				document.getElementById('A1show').click();
+				document.getElementById('A1go').click();
+			};
+			window.onload = function(){ 
+				document.getElementById('A1hide').click();
+				document.getElementById('A2hide').click();	
+				document.getElementById('A3hide').click();					
+			}
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<main class="panelMain">
+				<div class="mediaContain">
+					<div class="slideshow-container">
+						<div class="mySlides fade">
+							<img class="image" src="${7:imageURL}" />
+							<div class="captionDiv">
+								<div class="caption">Image Source: <a href="${8:imageSourceURL}" target="_blank">${9:imageSourceTitle}</a></div>
+					  		</div>
+					    </div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="title">
+						${1:Tilte}
+					</div>
+					<div class="snippet">
+						${2:Snippet}
+					</div>
+					<div class="description">
+						<div class="Qtext">
+							${3:Question}
+						</div>
+						<button id="buttonA" onclick="answerClick()" class="mdl-chip mdl-chip--contact">
+							<span class="mdl-chip__contact mdl-color-text--white">
+								<span>A</span>
+							</span>
+							<span class="mdl-chip__text">${4:Response1}</span>
+						</button>
+						<button id="buttonB" onclick="answerClick()" class="mdl-chip mdl-chip--contact">
+							<span class="mdl-chip__contact mdl-color-text--white">
+								<span>B</span>
+							</span>
+							<span class="mdl-chip__text">${5:Response2}</span>
+						</button>
+						<button id="buttonC" onclick="answerClick()" class="mdl-chip mdl-chip--contact">
+							<span class="mdl-chip__contact mdl-color-text--white">
+								<span>C</span>
+							</span>
+							<span class="mdl-chip__text">${6:Response3}</span>
+						</button>
+						<br>
+					</div>
+			    </div>
+				<div class="footer">
+					<div class="logoLeft">
+						<a href="https://twitter.com/geteach" target="_blank">
+							<img src="https://storage.googleapis.com/geteachkml4/logogeteachtemp.png" >
+						</a>
+					</div>
+					<div class="logoRight" style="display:none">
+						<a href="#ReplaceIDAnswer1;show" id="A1show"></a>
+						<a href="#ReplaceIDAnswer2;show" id="A2show"></a>
+						<a href="#ReplaceIDAnswer3;show" id="A3show"></a>
+						<a href="#ReplaceIDAnswer1;hide" id="A1hide"></a>
+						<a href="#ReplaceIDAnswer2;hide" id="A2hide"></a>
+						<a href="#ReplaceIDAnswer3;hide" id="A3hide"></a>
+						<a href="#ReplaceIDAnswer1;balloonFlyto" id="A1go"></a>
+						<a href="#ReplaceIDAnswer2;balloonFlyto" id="A2go"></a>
+						<a href="#ReplaceIDAnswer3;balloonFlyto" id="A3go"></a>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</html>
